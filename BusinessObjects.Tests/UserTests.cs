@@ -7,9 +7,10 @@ namespace forCrowd.WealthEconomy.BusinessObjects.Tests
     public class UserTests
     {
         [TestMethod]
-        public void NewUser_ShouldCreate()
+        public void NewUser_ShouldCreate_TypeOfUser()
         {
-            new User("A valid username?", "A valid email address?");
+         var newUser =   new User("A valid username?", "A valid email address?");
+            Assert.IsInstanceOfType(newUser,typeof(User));
         }
     }
 }
